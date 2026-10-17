@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "collections": {
+    "users": {
+      "description": "User accounts and roles for SIAKAD / KTM system",
+      "fields": {
+        "uid": { "type": "string", "description": "User ID matching auth.uid" },
+        "email": { "type": "string", "description": "User email address" },
+        "displayName": { "type": "string", "description": "Display name" },
+        "role": { "type": "string", "description": "Role: admin or operator" },
+        "createdAt": { "type": "number", "description": "Account creation timestamp" }
+      },
+      "rules": {
+        "read": "request.auth != null",
+        "write": "request.auth != null"
+      }
+    },
+    "students": {
+      "description": "Student data records for KTM generation and printing",
+      "fields": {
+        "id": { "type": "string", "description": "Unique student identifier" },
+        "nim": { "type": "string", "description": "Nomor Induk Mahasiswa" },
+        "nama": { "type": "string", "description": "Nama lengkap mahasiswa" },
+        "prodi": { "type": "string", "description": "Program studi" },
+        "fakultas": { "type": "string", "description": "Fakultas" },
+        "angkatan": { "type": "string", "description": "Tahun angkatan" },
+        "jenisKelamin": { "type": "string", "description": "Jenis kelamin: L atau P" },
+        "tempatTanggalLahir": { "type": "string", "description": "Tempat dan tanggal lahir" },
+        "alamat": { "type": "string", "description": "Alamat domisili" },
+        "berlakuHingga": { "type": "string", "description": "Masa berlaku kartu" },
+        "foto": { "type": "string", "description": "Foto profil mahasiswa" },
+        "createdAt": { "type": "number", "description": "Timestamp pembuatan" },
+        "createdBy": { "type": "string", "description": "UID pengguna pembuat" }
+      },
+      "rules": {
+        "read": "request.auth != null",
+        "write": "request.auth != null"
+      }
+    },
+    "settings": {
+      "description": "Global settings for KTM template, campus profile, and rector credentials",
+      "fields": {
+        "kementerian": { "type": "string", "description": "Nama Kementerian" },
+        "namaKampus": { "type": "string", "description": "Nama Perguruan Tinggi" },
+        "rektorName": { "type": "string", "description": "Nama lengkap Rektor" },
+        "rektorNip": { "type": "string", "description": "NIP Rektor" },
+        "rektorTitle": { "type": "string", "description": "Jabatan Rektor" },
+        "signatureUrl": { "type": "string", "description": "URL gambar tanda tangan digital" },
+        "stampUrl": { "type": "string", "description": "URL gambar stempel resmi" },
+        "terms": { "type": "array", "description": "Daftar butir tata tertib & ketentuan KTM" },
+        "updatedAt": { "type": "number", "description": "Waktu pembaruan" }
+      },
+      "rules": {
+        "read": "request.auth != null",
+        "write": "request.auth != null"
+      }
+    }
+  }
+}

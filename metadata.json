@@ -1,0 +1,6 @@
+{
+  "name": "Cetak KTM IAIN Pontianak",
+  "description": "Aplikasi pencetak Kartu Tanda Mahasiswa (KTM) otomatis IAIN Pontianak dengan database Google Sheets, autentikasi akun Google, import massal Excel, dan kustomisasi desain.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
