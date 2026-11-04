@@ -198,12 +198,16 @@ export const IAIN_PRODI_LIST = [
   'Tadris Matematika',
   // FASYA
   'Hukum Ekonomi Syariah',
+  'Hukum Keluarga Islam',
   'Hukum Tatanegara',
   // DAKWAH & KOMUNIKASI
+  'Bimbingan dan Komunikasi Islam',
   'Komunikasi dan Penyiaran Islam',
   'Manajemen Dakwah',
   // FUAD
   'Ilmu Al-Qur\'an dan Tafsir',
+  'Psikologi Islam',
+  'Studi Agama-Agama',
   // FEBI
   'Perbankan Syariah',
   'Ekonomi Syariah',
